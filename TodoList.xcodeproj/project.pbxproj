@@ -12,9 +12,9 @@
 		604C477E2AC83EBC002F4227 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604C477D2AC83EBC002F4227 /* TaskListViewController.swift */; };
 		604C47832AC83EBE002F4227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604C47822AC83EBE002F4227 /* Assets.xcassets */; };
 		604C47862AC83EBE002F4227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604C47842AC83EBE002F4227 /* LaunchScreen.storyboard */; };
+		607B131D2AC856C300CAC084 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 607B131C2AC856C300CAC084 /* Realm */; };
+		607B131F2AC856C300CAC084 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 607B131E2AC856C300CAC084 /* RealmSwift */; };
 		608D8BD62AC8451F00600310 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D8BD52AC8451F00600310 /* TasksViewController.swift */; };
-		608D8BDE2AC8474000600310 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 608D8BDD2AC8474000600310 /* Realm */; };
-		608D8BE02AC8474000600310 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 608D8BDF2AC8474000600310 /* RealmSwift */; };
 		608D8BE22AC8489900600310 /* AlertControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D8BE12AC8489900600310 /* AlertControllerBuilder.swift */; };
 		608D8BE42AC848B100600310 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D8BE32AC848B100600310 /* DataManager.swift */; };
 		608D8BE62AC848BD00600310 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D8BE52AC848BD00600310 /* StorageManager.swift */; };
@@ -41,8 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				608D8BE02AC8474000600310 /* RealmSwift in Frameworks */,
-				608D8BDE2AC8474000600310 /* Realm in Frameworks */,
+				607B131F2AC856C300CAC084 /* RealmSwift in Frameworks */,
+				607B131D2AC856C300CAC084 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,8 +156,8 @@
 			);
 			name = TodoList;
 			packageProductDependencies = (
-				608D8BDD2AC8474000600310 /* Realm */,
-				608D8BDF2AC8474000600310 /* RealmSwift */,
+				607B131C2AC856C300CAC084 /* Realm */,
+				607B131E2AC856C300CAC084 /* RealmSwift */,
 			);
 			productName = TodoList;
 			productReference = 604C47762AC83EBC002F4227 /* TodoList.app */;
@@ -457,12 +457,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		608D8BDD2AC8474000600310 /* Realm */ = {
+		607B131C2AC856C300CAC084 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 608D8BDC2AC8474000600310 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		608D8BDF2AC8474000600310 /* RealmSwift */ = {
+		607B131E2AC856C300CAC084 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 608D8BDC2AC8474000600310 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
