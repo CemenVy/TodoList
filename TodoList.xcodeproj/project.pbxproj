@@ -19,6 +19,7 @@
 		608D8BE42AC848B100600310 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D8BE32AC848B100600310 /* DataManager.swift */; };
 		608D8BE62AC848BD00600310 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D8BE52AC848BD00600310 /* StorageManager.swift */; };
 		608D8BE82AC848D000600310 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D8BE72AC848D000600310 /* TaskList.swift */; };
+		60BA0B1B2ACFE8AB00C96F5D /* Extension + UITabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BA0B1A2ACFE8AB00C96F5D /* Extension + UITabelViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		608D8BE32AC848B100600310 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		608D8BE52AC848BD00600310 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		608D8BE72AC848D000600310 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		60BA0B1A2ACFE8AB00C96F5D /* Extension + UITabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITabelViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				608D8BD32AC8439400600310 /* App */,
 				608D8BD42AC843C200600310 /* ViewControllers */,
+				60BA0B192ACFE84100C96F5D /* Extensions */,
 				608D8BD82AC8457E00600310 /* Models */,
 				608D8BD92AC8458500600310 /* Services */,
 				608D8BD72AC8456800600310 /* Factories */,
@@ -137,6 +140,14 @@
 				604C47822AC83EBE002F4227 /* Assets.xcassets */,
 			);
 			path = Resurces;
+			sourceTree = "<group>";
+		};
+		60BA0B192ACFE84100C96F5D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				60BA0B1A2ACFE8AB00C96F5D /* Extension + UITabelViewCell.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 				608D8BE42AC848B100600310 /* DataManager.swift in Sources */,
 				604C477E2AC83EBC002F4227 /* TaskListViewController.swift in Sources */,
 				608D8BE62AC848BD00600310 /* StorageManager.swift in Sources */,
+				60BA0B1B2ACFE8AB00C96F5D /* Extension + UITabelViewCell.swift in Sources */,
 				608D8BD62AC8451F00600310 /* TasksViewController.swift in Sources */,
 				604C477A2AC83EBC002F4227 /* AppDelegate.swift in Sources */,
 				604C477C2AC83EBC002F4227 /* SceneDelegate.swift in Sources */,
