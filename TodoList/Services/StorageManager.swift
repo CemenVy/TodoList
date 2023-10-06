@@ -11,7 +11,7 @@ import RealmSwift
 final class StorageManager {
     static let shared = StorageManager()
     
-    private let realm: Realm
+    let realm: Realm
     
     private init() {
         do {
@@ -22,10 +22,6 @@ final class StorageManager {
     }
     
     // MARK: - Task List
-    func fetchData<T>(_ type: T.Type) -> Results<T> where T: RealmFetchable {
-        realm.objects(T.self)
-    }
-    
     func save(_ taskLists: [TaskList]) {
         write {
             realm.add(taskLists)
@@ -47,18 +43,18 @@ final class StorageManager {
         }
     }
     
-    func edit( _ taskList: TaskList, newValue: String) {
+    func edit(_ taskList: TaskList, newValue: String) {
         write {
             taskList.title = newValue
         }
     }
-    
+
     func done(_ taskList: TaskList) {
         write {
             taskList.tasks.setValue(true, forKey: "isComplete")
         }
     }
-    
+
     // MARK: - Tasks
     func save(_ task: String, withNote note: String, to taskList: TaskList, completion: (Task) -> Void) {
         write {
@@ -68,7 +64,25 @@ final class StorageManager {
         }
     }
     
-    // MARK: - Private methods
+    func delete(_ task: Task) {
+        write {
+            realm.delete(task)
+        }
+    }
+    
+    func edit(_ task: Task, to newValue: String, withNote note: String) {
+        write {
+            task.title = newValue
+            task.note = note
+        }
+    }
+    
+    func done(_ task: Task) {
+        write {
+            task.isComplete.toggle()
+        }
+    }
+    
     private func write(completion: () -> Void) {
         do {
             try realm.write {
