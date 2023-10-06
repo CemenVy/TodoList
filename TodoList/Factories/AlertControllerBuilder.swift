@@ -26,17 +26,36 @@ final class AlertControllerBuilder {
     }
     
     /**
-         Создает текстовое поле с указанным текстом и плейсхолдером.
+         Устанавливает текстовое поле с указанным заголовком.
          
-         - Parameters:
-            - placeholder: Определяет плейсхолдер для текстового поля
-            - text: Определяет текст отображения в текстовом поле
+         - Parameter title: Заголовок текстового поля.
          - Returns: Ссылка на текущий экземпляр `AlertControllerBuilder` для цепочки вызовов.
          */
-    func setTextField(withPlaceholder placeholder: String, andText text: String?) -> AlertControllerBuilder {
+    func setTextField(_ title: String?) -> AlertControllerBuilder {
         alertController.addTextField { textField in
-            textField.placeholder = placeholder
-            textField.text = text
+            textField.placeholder = "List Title"
+            textField.text = title
+        }
+        return self
+    }
+    
+    /**
+         Устанавливает два текстовых поля: одно для заголовка задачи и другое для заголовка заметки.
+         
+         - Parameters:
+           - title: Заголовок задачи.
+           - note: Заголовок заметки.
+         - Returns: Ссылка на текущий экземпляр `AlertControllerBuilder` для цепочки вызовов.
+         */
+    func setTextFields(title: String?, note: String?) -> AlertControllerBuilder {
+        alertController.addTextField { textField in
+            textField.placeholder = "Task Title"
+            textField.text = title
+        }
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Note Title"
+            textField.text = note
         }
         return self
     }
